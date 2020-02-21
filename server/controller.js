@@ -43,19 +43,19 @@ module.exports = {
        res.status(200).send(session.user)
 
     },   
-// showPosts: async (req, res) => {
-//     const {id} = req.params
-//     const db = req.app.get('db');
-//     const posts = await db.get_posts([id]);
-//     if (posts[0]) {
-//       res.status(200).send(posts);
-//     } else {
-//       res.status(500).send(`Couldn't find posts`);
-//     }
-//     //  await db.get_posts().then(posts =>{
-//     //     res.status(200).send(posts)
-//     // }).catch(err => res.status(500).send(err))
-// },
+showAllPosts: async (req, res) => {
+    const {id} = req.params
+    const db = req.app.get('db');
+    const posts = await db.get_posts([id]);
+    if (posts[0]) {
+      res.status(200).send(posts);
+    } else {
+      res.status(500).send(`Couldn't find posts`);
+    }
+    //  await db.get_posts().then(posts =>{
+    //     res.status(200).send(posts)
+    // }).catch(err => res.status(500).send(err))
+},
 
     logout: (req, res ) => {
         req.session.destroy();

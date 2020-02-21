@@ -17,13 +17,13 @@ class Dashboard extends Component {
         this.getAllPosts()
     }
 
-    getAllPosts = (id) => {
-        axios.get(`api/posts/${this.props.user.userId}`).then((res) => {
-            this.setState({
-                posts: res.data
-            })
-        }).catch(err => console.warn(err))
-    }
+    // getAllPosts = (id) => {
+    //     axios.get(`api/posts/${this.props.user.userId}`).then((res) => {
+    //         this.setState({
+    //             posts: res.data
+    //         })
+    //     }).catch(err => console.warn(err))
+    // }
 
     resetSearch = () => {
         this.setState({

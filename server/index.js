@@ -23,7 +23,7 @@ app.use(
 app.post(`/api/login`, ctrl.login)
 app.post(`/api/register` , ctrl.register)
 app.post('/api/logout', ctrl.logout)
-app.get(`api/posts/:id`, ctrl.showPosts)
+app.get(`api/posts/:id`, ctrl.showAllPosts)
 // app.delete()
 
 massive({
